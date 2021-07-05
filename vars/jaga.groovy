@@ -1,3 +1,3 @@
-def call(X,Y){
-  echo "your first name is $(X) and last name is $(Y)
+def call(x,y){
+  echo "your first name is $(x) and last name is $(y)"
 }
