@@ -1,12 +1,12 @@
 def call(nexusrepo){
   def pom = readMavenPom file: 'pom.xml'
   def repo = nexusrepo 
-  def artifactid = pom.artifactid
-  def groupid = pom.groupid
-  nexusArtifactUploader artifacts: [[artifactId: artifactid, classifier: '', file: "target/${artifactid}-${pom.version}.war",
+  def artifactId = pom.artifactId
+  def groupId = pom.groupId
+  nexusArtifactUploader artifacts: [[artifactId: artifactId, classifier: '', file: "target/${artifactId}-${pom.version}.war",
   type: 'war']],
   credentialsId: 'nexus3',
-  groupId: groupid,
+  groupId: groupId,
   nexusUrl: '172.31.9.150:8081',
   nexusVersion: 'nexus3',
   protocol: 'http',
